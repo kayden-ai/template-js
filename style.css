@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #2c3e50;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#login-form {
+    display: flex;
+    gap: 10px;
+}
+
+#login-form input,
+#login-form button,
+#logout-btn {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#login-form button,
+#logout-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.sidebar {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#restaurant-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#restaurant-list li {
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#restaurant-list li:hover,
+#restaurant-list li.selected {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+.content {
+    flex: 3;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.buttons {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    background: white;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.buttons button.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.course-card,
+.day-card {
+    border-left: 4px solid var(--primary-color);
+    background: var(--bg-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.price {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+#auth-message {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+}
